@@ -1,0 +1,22 @@
+{
+  "name": "me.jaredfurlow.com",
+  "private": true,
+  "author": "Jared (jdf2)",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "npm run build && gh-pages -d dist",
+    "add-cname": "echo 'me.jaredfurlow.com' > docs/CNAME"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "gh-pages": "^3.1.0",
+    "vite": "^2.0.0-beta.12",
+    "autoprefixer": "^10.2.1",
+    "postcss": "^8.2.4"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.0.2"
+  }
+}

@@ -1,16 +1,20 @@
 module.exports = {
-  purge: [
-    "index.html",
-    "src/**/*.html",
-    "src/**/*.css",
-    "src/**/*.js"
-  ],
+  purge: ["index.html", "src/**/*.html", "src/**/*.css", "src/**/*.js"],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        test: "#1A1A1A",
+        shirt: "#BA8480",
+      },
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      display: ["dark"],
+      borderColor: ["dark"],
+      borderWidth: ["hover"],
+    },
   },
   plugins: [],
-}
+};

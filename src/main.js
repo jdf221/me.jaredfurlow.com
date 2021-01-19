@@ -51,7 +51,11 @@ $darkModeSwitch.addEventListener(
 
   const discordMember = await fetch(
     "https://discord.com/api/guilds/744420915315605564/widget.json"
-  ).then((res) => res.json()?.members?.[0]);
+  )
+    .then((res) => res.json())
+    .then((json) => {
+      return json?.members?.[0];
+    });
 
   if (discordMember?.id === "0" && discordMember?.username === "Jared") {
     if (discordMember?.status === "online") {

@@ -7,6 +7,10 @@ module.exports = {
         test: "#1A1A1A",
         shirt: "#BA8480",
       },
+      screens: {
+        portrait: { raw: "(orientation: portrait)" },
+        landscape: { raw: "(orientation: landscape)" },
+      },
     },
   },
   variants: {

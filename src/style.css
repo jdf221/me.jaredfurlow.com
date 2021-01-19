@@ -1,3 +1,51 @@
+html {
+  font-size: max(1rem, min(1.5vw, 1.3rem));
+}
+
 body {
-  font-family: -apple-system, "Roboto Thin", "Arial", sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Roboto",
+    "Helvetica", "Arial", sans-serif;
+}
+
+a {
+  @apply dark:text-yellow-300 text-indigo-700 hover:border-b border-current border-dashed;
+}
+
+/*Makes the click area a bit bigger. Easier for touchscreens*/
+.dark-mode-switch:before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  left: -5px;
+  top: -7px;
+}
+
+.spotify-recent-track {
+  max-width: 5rem;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 10s ease-in-out infinite alternate;
+  animation-delay: 2s;
+}
+
+.marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion) {
+  .marquee {
+    animation: none;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% + 4.7rem));
+  }
 }

@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        test: "#1A1A1A",
+        "kinda-black": "#1A1A1A",
+        "kinda-white": "#EAEFF4",
         shirt: "#BA8480",
       },
       screens: {

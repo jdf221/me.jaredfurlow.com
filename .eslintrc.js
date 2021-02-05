@@ -3,8 +3,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  plugins: [],
-  extends: ["prettier"],
+  extends: ["@jdf221/eslint-config-basic"],
   parserOptions: {
     ecmaVersion: 12,
     sourceType: "module",

@@ -7,7 +7,7 @@ body {
     "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
-a {
+body a {
   @apply dark:text-yellow-300 text-indigo-700 hover:border-b border-current border-dashed;
 }
 

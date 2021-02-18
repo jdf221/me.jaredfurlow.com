@@ -14,21 +14,24 @@
     <title>Jared Furlow</title>
 
     <script>
+      const $html = document.querySelector("html");
       if (
         localStorage.theme === "dark" ||
         (!("theme" in localStorage) &&
           window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
-        document.querySelector("html").classList.add("dark");
+        $html.classList.add("dark");
       } else {
-        document.querySelector("html").classList.remove("dark");
+        $html.classList.remove("dark");
       }
     </script>
-  <script type="module" crossorigin src="/assets/index.337c8701.js"></script>
-  <link rel="stylesheet" href="/assets/index.f9fc3442.css">
+  <script type="module" crossorigin src="/assets/index.f2d2c55a.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.4c1a608e.js">
+  <link rel="stylesheet" href="/assets/index.837dadaa.css">
+  <link rel="stylesheet" href="/assets/vendor.06559967.css">
 </head>
   <body
-    class="dark:text-gray-200 dark:bg-test bg-indigo-50 subpixel-antialiased"
+    class="dark:text-gray-200 dark:bg-kinda-black bg-kinda-white subpixel-antialiased"
   >
     <div
       class="portrait:flex-wrap sm:flex-nowrap flex flex-wrap justify-center px-4 pt-20 pb-10 space-x-4"
@@ -36,14 +39,12 @@
       <div class="flex flex-col items-center">
         <img
           class="w-60 h-60 dark:ring-shirt ring-indigo-700 ring-1 object-cover mb-0.5"
-          src=/jared.jpg
+          src="/jared.jpg"
           alt="Picture of Jared"
         />
         <div class="dark:text-yellow-300 relative text-center text-indigo-700">
           <div class="inline space-x-0.5">
-            <a href="https://jaredfurlow.com/files/JaredFurlowResume.pdf"
-              >Resume</a
-            >
+            <a href="./resume.pdf">Resume</a>
             <a href="https://www.linkedin.com/in/jaredfurlow/">LinkedIn</a>
             <a href="https://github.com/jdf221">GitHub</a>
             <a href="https://twitter.com/jdf221">Twitter</a>
@@ -130,23 +131,43 @@
         </div>
         <h2 class="font-bold">Web Developer / Student</h2>
         <p class="text-sm">
+          <a href="./resume.pdf">Resume</a>
+          <span> / </span>
           <a href="mailto:jdf2.furlow@gmail.com">jdf2.furlow@gmail.com</a>
         </p>
-        <div class="mt-5 space-y-3 text-sm font-light">
+        <div class="relative mt-5 space-y-3 text-sm font-light">
+          <div
+            class="secretEmojiContainer animate-bounce absolute -mt-3 opacity-75 pointer-events-none"
+          ></div>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            dignissim non ipsum ut commodo. Vivamus in sagittis tortor. Nullam
-            feugiat erat vitae iaculis convallis.
+            <span class="secretEmojiTrigger cursor-pointer">Hey</span>, I'm
+            Jared. I mostly work on web related projects but every now and then
+            I'll branch out and give something different a try. I am currently a
+            junior majoring in
+            <span class="dark:text-gray-100 font-bold"
+              >Computer Information Systems</span
+            >
+            graduating in 2022.
           </p>
           <p>
-            Nulla odio augue, ultrices vel egestas sit amet, consectetur vel
-            nisi. Pellentesque habitant morbi tristique senectus et netus et
-            malesuada fames ac turpis egestas. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas.
+            I have experience with the tools that make up a modern web
+            development tool chain, including but not limited to
+            <span class="dark:text-gray-100 font-bold"
+              >ES6, Typescript, NodeJS, VueJS, bundlers and linters</span
+            >.
+          </p>
+          <p>
+            I also have knowledge with various different technologies such as
+            <span class="dark:text-gray-100 font-bold"
+              >PHP, Swift, Python, Lua, Java, MongoDB, Redis, MySQL, Postgres, and Linux</span
+            >.
+          </p>
+          <p>
+            I have been developing websites for over 5 years and plan to work in the web industry after I graduate.
           </p>
         </div>
-        <h1 class="mt-5 text-xl font-bold">Projects</h1>
-        <div class="text-normal mt-1 space-y-3 text-sm">
+        <!--<h1 class="mt-5 text-xl font-bold">Projects</h1>
+        <div class="text-normal mt-1 space-y-3 text-sm font-light">
           <p>
             <a>Lorem ipsum dolor</a>, Maecenas pretium eu augue vitae suscipit.
             Maecenas consequat orci mauris, a dictum nisi convallis a.
@@ -169,7 +190,7 @@
           <p>
             <a class="font-light">View full list</a>
           </p>
-        </div>
+        </div>-->
       </div>
     </div>
     

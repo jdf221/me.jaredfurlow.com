@@ -54,7 +54,7 @@ $darkModeSwitch.addEventListener(
     });
 
   if (discordMember?.id === "0" && discordMember?.username === "Jared") {
-    if (discordMember?.status === "online") {
+    if (["online", "idle"].includes(discordMember?.status)) {
       $discordStatus.textContent = "Online";
     } else {
       $discordStatus.textContent = "Offline";

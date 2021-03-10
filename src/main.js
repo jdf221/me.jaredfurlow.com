@@ -1,4 +1,4 @@
-import "tailwindcss/tailwind.css";
+import "@virtual/windi.css";
 import "./style.css";
 
 import "typeface-roboto";

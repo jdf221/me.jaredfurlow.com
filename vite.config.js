@@ -6,10 +6,8 @@ import handlebars from "vite-plugin-handlebars";
 
 export default defineConfig({
   plugins: [
-    ...WindiCSS({
-      scan: {
-        fileExtensions: ["hbs", "html"],
-      },
+    WindiCSS({
+      scan: { fileExtensions: ["html", "css", "hbs"] },
     }),
     handlebars({
       partialDirectory: path.resolve(__dirname, "src/partials"),

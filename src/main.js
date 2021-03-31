@@ -1,4 +1,4 @@
-import "@virtual/windi.css";
+import "virtual:windi.css";
 import "./style.css";
 
 import "typeface-roboto";

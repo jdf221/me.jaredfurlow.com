@@ -76,8 +76,8 @@ const emojiSelection = [
   "❤️",
   "️🐝",
 ];
-const $secretEmojiContainer = document.querySelector(".secretEmojiContainer");
-document.querySelector(".secretEmojiTrigger").addEventListener(
+const $secretEmojiContainer = document.querySelector(".secret-emoji-container");
+document.querySelector(".secret-emoji-trigger").addEventListener(
   "click",
   () => {
     const selectedEmoji =
@@ -85,6 +85,7 @@ document.querySelector(".secretEmojiTrigger").addEventListener(
     $secretEmojiContainer.textContent =
       selectedEmoji + $secretEmojiContainer.textContent;
 
+    // Removes oldest emoji every 2.5 seconds
     setTimeout(() => {
       $secretEmojiContainer.textContent = $secretEmojiContainer.textContent.slice(
         0,

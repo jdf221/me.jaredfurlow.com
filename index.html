@@ -33,19 +33,20 @@
     </script>
   </head>
   <body
+    style="display: none;"
     class="dark:text-gray-200 dark:bg-kinda-black bg-kinda-white subpixel-antialiased"
   >
     <div
-      class="portrait:flex-wrap sm:flex-nowrap flex flex-wrap justify-center px-4 pt-20 pb-10 space-x-4"
+      class="portrait:flex-wrap sm:flex-nowrap flex flex-wrap justify-center px-4 pt-10 pb-10 space-x-4"
     >
-      <div class="flex flex-col items-center">
+      <div class="flex flex-col items-center pb-2 mt-1">
         {{> ProfileSection}}
         <div class="flex flex-row -ml-3 space-x-3">
           {{> SpotifyWidget}}
           {{> DiscordWidget}}
         </div>
       </div>
-      <div class="landscape:max-w-prose">
+      <div class="landscape:max-w-prose border-l border-indigo-700 dark:border-shirt pl-2">
         {{> MainHeader}}
         {{> AboutMe}}
         {{> ProjectList}}

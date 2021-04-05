@@ -16,10 +16,9 @@
     "prettier-plugin-tailwind-css": "^1.4.0",
     "tailwindcss": "^2.0.3",
     "vite": "^2.0.0-beta.45",
+    "vite-plugin-fonts": "^0.2.2",
     "vite-plugin-handlebars": "^1.1.2",
     "vite-plugin-windicss": "^0.8.3"
   },
-  "dependencies": {
-    "typeface-roboto": "^1.1.13"
-  }
+  "dependencies": {}
 }

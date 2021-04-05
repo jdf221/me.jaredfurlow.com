@@ -1,8 +1,6 @@
 import "virtual:windi.css";
 import "./style.css";
 
-import "typeface-roboto";
-
 const $darkModeSwitch = document.querySelector(".dark-mode-switch");
 
 $darkModeSwitch.addEventListener(

@@ -8,7 +8,7 @@ import handlebars from "vite-plugin-handlebars";
 export default defineConfig({
   plugins: [
     WindiCSS({
-      scan: { fileExtensions: ["html", "css", "hbs"] },
+      scan: { dirs: ["."], fileExtensions: ["html", "css", "hbs"] },
     }),
     VitePluginFonts({
       google: {

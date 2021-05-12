@@ -19,6 +19,5 @@
     "vite-plugin-fonts": "^0.2.2",
     "vite-plugin-handlebars": "^1.1.2",
     "vite-plugin-windicss": "^0.8.3"
-  },
-  "dependencies": {}
+  }
 }

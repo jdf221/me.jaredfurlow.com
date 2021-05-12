@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  display: block !important;
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
     "Roboto", "Helvetica", "Arial", sans-serif;
 }

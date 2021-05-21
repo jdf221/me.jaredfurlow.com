@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Hi! I'm Jared, a junior in college majoring in Computer Information Systems.">
+  <meta property="og:title" content="Jared Furlow - Web Developer / Student">
+  <meta property="og:description" content="Hi! I am currently a junior in college majoring in Computer Information Systems.">
+  <meta property="og:image" content="https://me.jaredfurlow.com/jared.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@jdf221">
+
+  <meta
+    name="description"
+    content="Web Developer / Student - I make stuff sometimes"
+  />
+  <link rel="canonical" href="https://me.jaredfurlow.com/" />
+
+  <title>Jared Furlow | Web Developer / Student</title>
+
+  <script>
+  const $html = document.querySelector("html");
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    $html.classList.add("dark");
+  } else {
+    $html.classList.remove("dark");
+  }
+  </script>
+</head>
+<body
+  class="dark:text-gray-200 dark:bg-kinda-black bg-kinda-white subpixel-antialiased"
+>
+<div
+  class="portrait:flex-wrap sm:flex-nowrap flex flex-wrap justify-center px-4 pt-10 pb-10 space-x-4"
+>
+  <div class="flex flex-col items-center pb-2 mt-1">
+    {{> ProfileSection}}
+    <div class="flex flex-row -ml-3 space-x-3">
+      {{> SpotifyWidget}}
+      {{> DiscordWidget}}
+    </div>
+  </div>
+  <div class="landscape:max-w-prose portrait:max-w-2xl border-l border-indigo-700 dark:border-shirt pl-2">
+    {{> MainHeader}}
+    {{> AboutMe}}
+    {{> ProjectList}}
+  </div>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

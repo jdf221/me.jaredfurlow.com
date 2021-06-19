@@ -8,7 +8,10 @@ import customIndex from "vite-plugin-custom-index";
 
 export default defineConfig({
   plugins: [
-    customIndex("index.hbs"),
+    customIndex({
+      index: "index.hbs",
+      treatAsHtml: ["hbs"],
+    }),
     WindiCSS({
       scan: { dirs: ["."], fileExtensions: ["html", "css", "hbs"] },
     }),

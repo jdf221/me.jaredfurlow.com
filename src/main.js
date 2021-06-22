@@ -69,27 +69,46 @@ const emojiSelection = [
   "🥳",
   "🙃",
   "🤠",
+  "😷",
   "🐶",
   "🐱",
   "❤️",
   "️🐝",
 ];
 const $secretEmojiContainer = document.querySelector(".secret-emoji-container");
-document.querySelector(".secret-emoji-trigger").addEventListener(
-  "click",
-  () => {
-    const selectedEmoji =
-      emojiSelection[Math.floor(Math.random() * emojiSelection.length)];
-    $secretEmojiContainer.textContent =
-      selectedEmoji + $secretEmojiContainer.textContent;
+const $secretEmojiFace = document.querySelector(".secret-emoji-face");
+function triggerEmojiFun() {
+  const selectedEmoji =
+    emojiSelection[Math.floor(Math.random() * emojiSelection.length)];
+  $secretEmojiContainer.textContent =
+    selectedEmoji + $secretEmojiContainer.textContent;
+  $secretEmojiFace.textContent = selectedEmoji;
 
-    // Removes oldest emoji every 2.5 seconds
-    setTimeout(() => {
-      $secretEmojiContainer.textContent = $secretEmojiContainer.textContent.slice(
-        0,
-        -selectedEmoji.length
-      );
-    }, 2500);
-  },
-  false
+  // Removes oldest emoji every 2.5 seconds
+  setTimeout(() => {
+    $secretEmojiContainer.textContent = $secretEmojiContainer.textContent.slice(
+      0,
+      -selectedEmoji.length
+    );
+
+    if ($secretEmojiContainer.textContent.length === 0) {
+      $secretEmojiFace.textContent = "";
+    }
+  }, 2500);
+}
+document
+  .querySelector(".secret-emoji-trigger")
+  .addEventListener("click", triggerEmojiFun);
+
+window.fun = triggerEmojiFun;
+
+console.log("%c👋 Hello!", "font-size: 40px;");
+console.log(
+  "%cWhy're you looking in here? The code is on Github! https://github.com/jdf221/me.jaredfurlow.com",
+  "font-size: 15px"
+);
+console.log(
+  "%cSince you're here might as well try running %cfun()",
+  "font-size: 12px;",
+  "border-radius: 5px; border: 1px solid #BCBEC0; padding: 1.5px;"
 );

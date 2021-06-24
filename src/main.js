@@ -17,6 +17,28 @@ $darkModeSwitch.addEventListener(
   false
 );
 
+const profileImageDateMapping = [
+  {
+    fromDate: new Date("12-15"),
+    toDate: new Date("12-31"),
+    imagePath: "/images/jaredSanta.jpg",
+  },
+];
+
+const todayDate = new Date();
+for (const { fromDate, toDate, imagePath } of profileImageDateMapping) {
+  fromDate.setFullYear(todayDate.getFullYear());
+  toDate.setFullYear(todayDate.getFullYear());
+
+  if (
+    fromDate.getTime() <= todayDate.getTime() &&
+    todayDate.getTime() <= toDate.getTime()
+  ) {
+    document.querySelector(".profile-image").src = imagePath;
+    break;
+  }
+}
+
 (async () => {
   const $track = document.querySelector(".spotify-recent-track").children[0]
     .children[0];

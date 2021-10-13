@@ -1,10 +1,10 @@
 import path from "path";
-import { defineConfig } from "vite";
 
-import WindiCSS from "vite-plugin-windicss";
+import { defineConfig } from "vite";
+import customIndex from "vite-plugin-custom-index";
 import VitePluginFonts from "vite-plugin-fonts";
 import handlebars from "vite-plugin-handlebars";
-import customIndex from "vite-plugin-custom-index";
+import WindiCSS from "vite-plugin-windicss";
 
 export default defineConfig({
   plugins: [

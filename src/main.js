@@ -6,7 +6,10 @@ const $darkModeSwitch = document.querySelector(".dark-mode-switch");
 $darkModeSwitch.addEventListener(
   "click",
   () => {
-    if (localStorage.theme === "dark") {
+    if (
+      localStorage.theme === "dark" ||
+      document.querySelector("html").classList.contains("dark")
+    ) {
       localStorage.theme = "light";
       document.querySelector("html").classList.remove("dark");
     } else {
@@ -19,9 +22,14 @@ $darkModeSwitch.addEventListener(
 
 const profileImageDateMapping = [
   {
-    fromDate: new Date("12-15"),
-    toDate: new Date("12-31"),
-    imagePath: "/images/jaredSanta.jpg",
+    fromDate: new Date("12/27/1999"),
+    toDate: new Date("12/27/1999"),
+    imagePath: "/images/jared/jaredBirthday.jpg",
+  },
+  {
+    fromDate: new Date("12/25/1999"),
+    toDate: new Date("12/31/1999"),
+    imagePath: "/images/jared/jaredSanta.jpg",
   },
 ];
 
@@ -29,6 +37,7 @@ const todayDate = new Date();
 for (const { fromDate, toDate, imagePath } of profileImageDateMapping) {
   fromDate.setFullYear(todayDate.getFullYear());
   toDate.setFullYear(todayDate.getFullYear());
+  toDate.setHours(23, 59, 59, 999);
 
   if (
     fromDate.getTime() <= todayDate.getTime() &&

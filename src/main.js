@@ -56,6 +56,8 @@ for (const { fromDate, toDate, imagePath } of profileImageDateMapping) {
   const currentTrack = await fetch(
     "https://api.jdf2.org/getMostRecentSpotifyTrack"
   ).then((response) => response.json());
+  currentTrack.track = "Amobeaaaaa";
+  currentTrack.artist = "Clairo";
 
   if (currentTrack.track && currentTrack.artist) {
     $track.textContent = currentTrack.track;
@@ -63,7 +65,7 @@ for (const { fromDate, toDate, imagePath } of profileImageDateMapping) {
     $artist.textContent = currentTrack.artist;
   }
 
-  if ($track.offsetWidth > $artist.offsetWidth) {
+  if ($track.offsetWidth > $track.parentElement.offsetWidth + 1) {
     // Base the animation duration off of the width of the track title
     // Keeps the animation from being too fast on long titles
     $track.style.animationDuration = `${
@@ -115,7 +117,7 @@ function triggerEmojiFun() {
     selectedEmoji + $secretEmojiContainer.textContent;
   $secretEmojiFace.textContent = selectedEmoji;
 
-  // Removes oldest emoji every 2.5 seconds
+  // Removes the oldest emoji every 2.5 seconds
   setTimeout(() => {
     $secretEmojiContainer.textContent = $secretEmojiContainer.textContent.slice(
       0,

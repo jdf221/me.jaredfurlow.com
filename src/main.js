@@ -56,8 +56,6 @@ for (const { fromDate, toDate, imagePath } of profileImageDateMapping) {
   const currentTrack = await fetch(
     "https://api.jdf2.org/getMostRecentSpotifyTrack"
   ).then((response) => response.json());
-  currentTrack.track = "Amobeaaaaa";
-  currentTrack.artist = "Clairo";
 
   if (currentTrack.track && currentTrack.artist) {
     $track.textContent = currentTrack.track;
